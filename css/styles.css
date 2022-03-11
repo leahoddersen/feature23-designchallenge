@@ -10,7 +10,6 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'TruckMap' !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -76,3 +75,6 @@
 .icon-search:before {
   content: "\53";
 }
+
+/* Colors */
+/* Fonts */
