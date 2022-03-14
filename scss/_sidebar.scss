@@ -107,13 +107,23 @@
         opacity: 50%;
         height: 50px;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100%;
         max-width: 277px;
         flex-direction: row;
+        padding-left: 16px;
 
         h2 {
             color: $white;
+            margin-bottom: 0;
+            padding: 0 15px;
+        }
+
+        .icon {
+            font-family: $iconFont;
+            font-size: 30px;
+            color: $white;
+            opacity: 20%;
         }
     }
 }   

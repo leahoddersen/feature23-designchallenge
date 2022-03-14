@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'TruckMap';
-  src:  url('fonts/TruckMap.eot?atbbdw');
-  src:  url('fonts/TruckMap.eot?atbbdw#iefix') format('embedded-opentype'),
-    url('fonts/TruckMap.ttf?atbbdw') format('truetype'),
-    url('fonts/TruckMap.woff?atbbdw') format('woff'),
-    url('fonts/TruckMap.svg?atbbdw#TruckMap') format('svg');
+  src:  url('fonts/TruckMap.eot?vski5x');
+  src:  url('fonts/TruckMap.eot?vski5x#iefix') format('embedded-opentype'),
+    url('fonts/TruckMap.ttf?vski5x') format('truetype'),
+    url('fonts/TruckMap.woff?vski5x') format('woff'),
+    url('fonts/TruckMap.svg?vski5x#TruckMap') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-settings:before {
+  content: "\66";
+}
 .icon-two-way:before {
   content: "\54";
 }

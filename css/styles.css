@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'TruckMap';
-  src: url("assets/fonts/TruckMap.eot?atbbdw");
-  src: url(".../fonts/TruckMap.eot?atbbdw#iefix") format("embedded-opentype"), url(".../fonts/TruckMap.ttf?atbbdw") format("truetype"), url(".../fonts/TruckMap.woff?atbbdw") format("woff"), url(".../fonts/TruckMap.svg?atbbdw#TruckMap") format("svg");
+  src: url("/assets/fonts/TruckMap-v1.0/fonts/TruckMap.eot");
+  src: url("/assets/fonts/TruckMap.eot?vski5x#iefix") format("embedded-opentype"), url("/assets/fonts/TruckMap.ttf?vski5x") format("truetype"), url("/assets/fonts/TruckMap.woff?vski5x") format("woff"), url("/assets/fonts/TruckMap.svg?vski5x#TruckMap") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -18,6 +18,10 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-settings:before {
+  content: "\66";
 }
 
 .icon-two-way:before {
@@ -140,12 +144,12 @@ h1 {
 
 h2 {
   font-size: 1em;
-  color: #505f70;
+  color: #858585;
 }
 
 h3 {
   font-size: .75em;
-  color: #505f70;
+  color: #858585;
 }
 
 label {
@@ -190,12 +194,12 @@ label {
   position: absolute;
   width: 25px;
   height: 25px;
-  color: #505f70;
+  color: #858585;
   border-radius: 50%;
   background: #fff;
   z-index: -1;
-  -webkit-box-shadow: 0px 0px 3px #505f70;
-          box-shadow: 0px 0px 3px #505f70;
+  -webkit-box-shadow: 0px 0px 3px #858585;
+          box-shadow: 0px 0px 3px #858585;
 }
 
 .routePlanner {
@@ -258,7 +262,7 @@ label {
           align-items: center;
   padding: 5px 10px;
   background-color: #f3f4f5;
-  border: 1px solid rgba(80, 95, 112, 0.5);
+  border: 1px solid rgba(133, 133, 133, 0.5);
   border-radius: 8px;
   position: relative;
   height: 40px;
@@ -274,8 +278,76 @@ label {
   margin: 0;
 }
 
+.routePlanner .routeHeader .profile {
+  width: 17%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.routePlanner .routeHeader .profile .profileOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.routePlanner .routeHeader .profile .profileOptions h2 {
+  margin-bottom: 0;
+  font-size: .9em;
+  color: #132437;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.routePlanner .routeHeader .profile .profileOptions .icon {
+  padding: 5px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.routePlanner .routeHeader .profile .profileImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.routePlanner .routeHeader .profile .profileImg img {
+  height: 170%;
+  width: auto;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-34%);
+          transform: translate(-34%);
+}
+
 .routePlanner .routeOptions {
-  top: 50px;
+  top: 65px;
   position: relative;
 }
 
@@ -412,7 +484,7 @@ label {
 }
 
 .navigation ul.navMenu li.route .subNav {
-  border-left: 0.5px solid #505f70;
+  border-left: 0.5px solid #858585;
   padding: 5px 36px;
   margin-left: 4px;
   opacity: 40%;
@@ -429,25 +501,35 @@ label {
   display: flex;
   position: fixed;
   bottom: 0;
-  border-top: 0.5px solid #505f70;
+  border-top: 0.5px solid #858585;
   opacity: 50%;
   height: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   max-width: 277px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-left: 16px;
 }
 
 .navigation .footer h2 {
   color: #fff;
+  margin-bottom: 0;
+  padding: 0 15px;
+}
+
+.navigation .footer .icon {
+  font-family: "TruckMap";
+  font-size: 30px;
+  color: #fff;
+  opacity: 20%;
 }
 
 .routeOptions form {
@@ -498,14 +580,14 @@ label {
 }
 
 .routeOptions form .truckInput .inputBox .truckWeightUnit, .routeOptions form .truckInput .inputBox .mph, .routeOptions form .speedLimitInput .inputBox .truckWeightUnit, .routeOptions form .speedLimitInput .inputBox .mph {
-  color: #505f70;
+  color: #858585;
 }
 
 .routeOptions form .truckType {
   margin-top: 0;
 }
 
-.routeOptions form .truckTypeInput {
+.routeOptions form .truckTypeInput, .routeOptions form .directionInput {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -517,14 +599,47 @@ label {
       -ms-flex-direction: row;
           flex-direction: row;
   border-radius: 8px;
-  -webkit-box-shadow: 0 0 3px #505f70;
-          box-shadow: 0 0 3px #505f70;
+  -webkit-box-shadow: 0 0 3px #858585;
+          box-shadow: 0 0 3px #858585;
   height: 33px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.routeOptions form .truckTypeInput #directionInput1, .routeOptions form .truckTypeInput #directionInput2, .routeOptions form .truckTypeInput #directionInput3, .routeOptions form .truckTypeInput #truckTypeInput1, .routeOptions form .truckTypeInput #truckTypeInput2, .routeOptions form .directionInput #directionInput1, .routeOptions form .directionInput #directionInput2, .routeOptions form .directionInput #directionInput3, .routeOptions form .directionInput #truckTypeInput1, .routeOptions form .directionInput #truckTypeInput2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #112337;
+  font-size: .95em;
+  font-weight: 600;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.routeOptions form .truckTypeInput #directionInput1:hover, .routeOptions form .truckTypeInput #directionInput2:hover, .routeOptions form .truckTypeInput #directionInput3:hover, .routeOptions form .truckTypeInput #truckTypeInput1:hover, .routeOptions form .truckTypeInput #truckTypeInput2:hover, .routeOptions form .directionInput #directionInput1:hover, .routeOptions form .directionInput #directionInput2:hover, .routeOptions form .directionInput #directionInput3:hover, .routeOptions form .directionInput #truckTypeInput1:hover, .routeOptions form .directionInput #truckTypeInput2:hover {
+  color: #3170b7;
+}
+
+.routeOptions form .truckTypeInput #directionInput1:after, .routeOptions form .truckTypeInput #directionInput2:after, .routeOptions form .truckTypeInput #truckTypeInput1:after, .routeOptions form .directionInput #directionInput1:after, .routeOptions form .directionInput #directionInput2:after, .routeOptions form .directionInput #truckTypeInput1:after {
+  content: '';
+  height: 80%;
+  position: relative;
+  width: 1px;
+  background-color: #858585;
+  opacity: 40%;
 }
 
 .routeOptions form:hover {
