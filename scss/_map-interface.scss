@@ -1,0 +1,73 @@
+.routePlanner {
+    max-height: 100vh;
+
+    .routeHeader {
+        height: 65px;
+        max-height: 65px;
+        background-color: $headerBg;
+        backdrop-filter: blur(6px);
+        opacity: 97%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 8;
+        position: absolute;
+        width: auto;
+        min-width: 83%;
+    
+        .headerInteractions {
+            height: 65px; 
+            max-height: 65px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .search {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 5px 10px;
+                background-color: $headerBg;
+                border: 1px solid rgba($lGrey, .5);
+                border-radius: 8px;
+                position: relative;
+                height: 40px;
+
+                
+                input {
+                    border: none;
+                    background-color: transparent;
+                    box-shadow: none;
+                    max-height: 30px;
+                    padding: 5px 10px;  
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .routeOptions {
+        top: 50px;
+        position: relative;
+    }
+ 
+    .mapInterface {
+        height: calc(100vh - 50px);
+        position: relative;
+
+        .map {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            height: calc(100% + 50px);
+
+            iframe {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

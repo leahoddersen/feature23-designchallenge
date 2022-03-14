@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'TruckMap';
-  src: url(".../fonts/TruckMap.eot?atbbdw");
+  src: url("assets/fonts/TruckMap.eot?atbbdw");
   src: url(".../fonts/TruckMap.eot?atbbdw#iefix") format("embedded-opentype"), url(".../fonts/TruckMap.ttf?atbbdw") format("truetype"), url(".../fonts/TruckMap.woff?atbbdw") format("woff"), url(".../fonts/TruckMap.svg?atbbdw#TruckMap") format("svg");
   font-weight: normal;
   font-style: normal;
@@ -78,3 +78,456 @@
 
 /* Colors */
 /* Fonts */
+html, body, form {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input, select {
+  position: relative;
+  border-radius: 5px;
+  border: transparent;
+  padding: 10px 15px;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 7px lightgrey;
+          box-shadow: 2px 2px 7px lightgrey;
+  margin-bottom: 15px;
+}
+
+select option:first-child {
+  opacity: .5;
+}
+
+input[type=button] {
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: auto;
+  margin: 0;
+}
+
+input[type=checkbox] {
+  border: transparent;
+  width: auto;
+  border: 5px;
+  -webkit-box-shadow: 2px 2px 7px lightgrey;
+          box-shadow: 2px 2px 7px lightgrey;
+  opacity: 40%;
+  margin: 0;
+}
+
+input[type=checkbox] :checked {
+  opacity: 100% 1;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+ul li ul {
+  padding-left: 10px;
+}
+
+h1 {
+  font-size: 1.15em;
+  padding: 5px 10px;
+  color: #112337;
+}
+
+h2 {
+  font-size: 1em;
+  color: #505f70;
+}
+
+h3 {
+  font-size: .75em;
+  color: #505f70;
+}
+
+label {
+  color: gray;
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  opacity: 62%;
+}
+
+.icon {
+  font-family: "TruckMap";
+}
+
+.row {
+  height: 100vh;
+}
+
+.col {
+  height: 100vh;
+}
+
+.minus, .plus {
+  border-radius: 50%;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 2;
+}
+
+.minus:before, .plus:before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  color: #505f70;
+  border-radius: 50%;
+  background: #fff;
+  z-index: -1;
+  -webkit-box-shadow: 0px 0px 3px #505f70;
+          box-shadow: 0px 0px 3px #505f70;
+}
+
+.routePlanner {
+  max-height: 100vh;
+}
+
+.routePlanner .routeHeader {
+  height: 65px;
+  max-height: 65px;
+  background-color: #f3f4f5;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  opacity: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 8;
+  position: absolute;
+  width: auto;
+  min-width: 83%;
+}
+
+.routePlanner .routeHeader .headerInteractions {
+  height: 65px;
+  max-height: 65px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.routePlanner .routeHeader .headerInteractions .search {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  background-color: #f3f4f5;
+  border: 1px solid rgba(80, 95, 112, 0.5);
+  border-radius: 8px;
+  position: relative;
+  height: 40px;
+}
+
+.routePlanner .routeHeader .headerInteractions .search input {
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  max-height: 30px;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+.routePlanner .routeOptions {
+  top: 50px;
+  position: relative;
+}
+
+.routePlanner .mapInterface {
+  height: calc(100vh - 50px);
+  position: relative;
+}
+
+.routePlanner .mapInterface .map {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: calc(100% + 50px);
+}
+
+.routePlanner .mapInterface .map iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.navigation {
+  background-color: #132437;
+  color: #fff;
+  padding-left: 0;
+}
+
+.navigation .navHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.navigation .navHeader img {
+  position: relative;
+  height: 50px;
+  padding-left: 10px;
+}
+
+.navigation .navHeader .mode {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  margin-bottom: 0;
+  opacity: 50%;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+.navigation ul.navMenu {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.navigation ul.navMenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px 0;
+}
+
+.navigation ul.navMenu li h2 {
+  color: #fff;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.navigation ul.navMenu li .icon {
+  font-family: "TruckMap";
+  font-size: 30px;
+  color: #fff;
+  opacity: 20%;
+}
+
+.navigation ul.navMenu li {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation ul.navMenu li  h2 {
+  opacity: 50%;
+}
+
+.navigation ul.navMenu li.route {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 100%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.navigation ul.navMenu li.route .routeList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.navigation ul.navMenu li.route .routeList h2 {
+  opacity: 100%;
+}
+
+.navigation ul.navMenu li.route .routeList .icon {
+  opacity: 90%;
+}
+
+.navigation ul.navMenu li.route .routeList ul {
+  margin-bottom: 15px;
+}
+
+.navigation ul.navMenu li.route .subNav {
+  border-left: 0.5px solid #505f70;
+  padding: 5px 36px;
+  margin-left: 4px;
+  opacity: 40%;
+}
+
+.navigation ul.navMenu li.route .subNav.selected {
+  opacity: 100%;
+  border-left: 1px solid #fff;
+}
+
+.navigation .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  border-top: 0.5px solid #505f70;
+  opacity: 50%;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 277px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navigation .footer h2 {
+  color: #fff;
+}
+
+.routeOptions form {
+  padding-left: 10px;
+}
+
+.routeOptions form .checkboxLabel {
+  margin: 2px;
+  color: #112337;
+  opacity: 100%;
+}
+
+.routeOptions form .truckInput, .routeOptions form .speedLimitInput {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.routeOptions form .truckInput label, .routeOptions form .speedLimitInput label {
+  margin-right: 15px;
+  color: #132437;
+  margin-top: 6px;
+  width: 50%;
+}
+
+.routeOptions form .truckInput .inputBox, .routeOptions form .speedLimitInput .inputBox {
+  margin: 0 5px;
+}
+
+.routeOptions form .truckInput .inputBox input, .routeOptions form .speedLimitInput .inputBox input {
+  width: 30px;
+  text-align: center;
+  margin-bottom: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.routeOptions form .truckInput .inputBox .truckWeightUnit, .routeOptions form .truckInput .inputBox .mph, .routeOptions form .speedLimitInput .inputBox .truckWeightUnit, .routeOptions form .speedLimitInput .inputBox .mph {
+  color: #505f70;
+}
+
+.routeOptions form .truckType {
+  margin-top: 0;
+}
+
+.routeOptions form .truckTypeInput {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 3px #505f70;
+          box-shadow: 0 0 3px #505f70;
+  height: 33px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.routeOptions form:hover {
+  cursor: pointer;
+  color: #132437;
+}

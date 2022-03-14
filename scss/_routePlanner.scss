@@ -1,0 +1,64 @@
+.routeOptions{
+    form {
+        padding-left: 10px;
+
+        .checkboxLabel {
+            margin: 2px;
+            color: $dGrey;
+            opacity: 100%;
+        }
+
+        .truckInput, .speedLimitInput {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+                margin-right: 15px;
+                color: $darkblue;
+                margin-top: 6px;
+                width: 50%;
+            }
+
+            .inputBox {
+                margin: 0 5px;
+                
+                input{
+                    width: 30px;
+                    text-align: center;
+                    margin-bottom: 5px;
+                    box-shadow: none;
+                    padding: 5px;
+                    font-weight: 600;
+                }
+
+                .truckWeightUnit, .mph {
+                    color: $lGrey;
+                }
+            }
+
+        }
+
+        .truckType {
+            margin-top: 0;
+        }
+
+        .truckTypeInput {
+            width: fit-content;
+            display: flex;
+            flex-direction: row;
+            border-radius: 8px;
+            box-shadow: 0 0 3px $lGrey;
+            height: 33px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        
+        &:hover{
+            cursor: pointer;
+            color: $darkblue;
+        }
+    }
+}

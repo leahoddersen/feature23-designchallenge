@@ -1,0 +1,111 @@
+html, body, form  {
+    font-family: $font;
+    background-color: $white;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+input, select {
+    position: relative;
+    border-radius: 5px;
+    border: transparent;
+    padding: 10px 15px;
+    width: 100%;
+    box-shadow: 2px 2px 7px lightgrey;
+    margin-bottom: 15px;
+}
+
+select {
+    option:first-child {
+        opacity: .5;
+    }
+}
+
+input[type=button] {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    width: auto;
+    margin: 0;
+}
+
+input[type=checkbox] {
+    border: transparent;
+    width: auto;
+    border: 5px;
+    box-shadow: 2px 2px 7px lightgrey;
+    opacity: 40%;
+    margin: 0;
+
+    :checked {
+        opacity: 100%1;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    li{
+        ul {
+            padding-left: 10px;
+        }
+    }
+}
+
+h1 {
+    font-size: 1.15em;
+    padding: 5px 10px;
+    color: $dGrey;
+}
+
+h2 {
+    font-size: 1em;
+    color: $lGrey;
+}
+
+h3 {
+    font-size: .75em;
+    color: $lGrey;
+}
+
+label {
+    color: gray;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    opacity: 62%;
+}
+
+.icon {
+    font-family: $iconFont;
+}
+
+.row{
+    height: 100vh;
+}
+
+.col {
+    height: 100vh;
+}
+
+.minus, .plus {
+    border-radius: 50%;
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        color: $lGrey;
+        border-radius: 50%;
+        background: $white;
+        z-index: -1;
+        box-shadow: 0px 0px 3px $lGrey;
+    }
+}

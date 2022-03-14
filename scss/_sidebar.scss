@@ -1,0 +1,119 @@
+.navigation {
+    background-color: $darkblue;
+    color: $white;
+    padding-left: 0;
+
+    .navHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        img {
+            position: relative;
+            height: 50px;
+            padding-left: 10px;
+        }
+
+        .mode {
+            color: $white;
+            border: 1px solid rgba($white, .5);
+            border-radius: 5px;
+            margin-bottom: 0;
+            opacity: 50%;
+            text-transform: uppercase;
+            padding: 5px 10px;
+        }
+    }
+
+    ul.navMenu {
+        list-style-type: none;
+        padding-left: 20px;
+
+        li{
+            display: flex;
+            padding: 2px 0;
+
+            h2 {
+                color: $white;
+                margin: 0;
+                padding: 10px 20px;
+            }
+
+            .icon {
+                font-family: $iconFont;
+                font-size: 30px;
+                color: $white;
+                opacity: 20%;
+            }
+
+            :not(li.route, li.subNav) {
+                flex-direction: row;
+                align-items: center;
+
+                h2 {
+                    opacity: 50%;
+                }
+            }
+
+            &.route {
+                flex-direction: column;
+                opacity: 100%;
+                align-items: baseline;
+
+                .routeList {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    
+                    h2{
+                        opacity: 100%;
+                    }
+
+                    .icon {
+                        opacity: 90%;
+                    }
+
+                    ul {
+                        margin-bottom: 15px;
+                    }
+
+                }
+
+                .subNav {
+                    border-left: .5px solid $lGrey;
+                    padding: 5px 36px;
+                    margin-left: 4px;
+                    opacity: 40%;
+
+                    &.selected {
+                        opacity: 100%;
+                        border-left: 1px solid $white;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .footer {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        border-top: .5px solid $lGrey;
+        opacity: 50%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 277px;
+        flex-direction: row;
+
+        h2 {
+            color: $white;
+        }
+    }
+}   
